@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @ts-nocheck
+
+import { useState } from "react";
+import "./App.css";
+import { data } from "./data";
+
+type Item = {
+  kannada: string;
+  telugu: string;
+};
+
+const getRandom = (arr: Array<Item>) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
 
 function App() {
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [show, setShow] = useState(false);
+  const generateKannada = () => {
+    const item = getRandom(data);
+    setQuestion(item.kannada);
+    setAnswer(item.telugu);
+    setShow(false);
+  };
+  const generateTelugu = () => {
+    const item = getRandom(data);
+    setQuestion(item.telugu);
+    setAnswer(item.kannada);
+    setShow(false);
+  };
+  const showAnswer = (status: boolean) => {
+    setShow(status);
+  };
+  console.log(data);
+  const ShowAnswer = ({ show, showAnswer }) => {
+    return (
+      <button onClick={() => showAnswer(!show)}>
+        {show ? "Hide" : "Show"} Answer
+      </button>
+    );
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={generateKannada}>Generate Kannada</button>
+      <button onClick={generateTelugu}>Generate Telugu</button>
+      {question && <div>{question}</div>}
+      {answer && show && <div>{answer}</div>}
+      {answer && <ShowAnswer show={show} showAnswer={showAnswer} />}
     </div>
   );
 }
