@@ -1,12 +1,10 @@
-// @ts-nocheck
-
 import { useState } from "react";
 import "./App.css";
-import { data } from "./data";
+import { Item, data } from "./data";
 
-type Item = {
-  kannada: string;
-  telugu: string;
+type ShowAnswerProps = {
+  show: boolean;
+  showAnswer: (status: boolean) => void;
 };
 
 const getRandom = (arr: Array<Item>) => {
@@ -33,7 +31,7 @@ function App() {
     setShow(status);
   };
   console.log(data);
-  const ShowAnswer = ({ show, showAnswer }) => {
+  const ShowAnswer = ({ show, showAnswer }: ShowAnswerProps) => {
     return (
       <button onClick={() => showAnswer(!show)}>
         {show ? "Hide" : "Show"} Answer

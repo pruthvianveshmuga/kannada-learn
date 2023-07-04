@@ -1,3 +1,8 @@
+export type Item = {
+  kannada: string;
+  telugu: string;
+};
+
 export const data = [
   {
     telugu: "This is in telugu 1",
