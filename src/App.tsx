@@ -30,7 +30,6 @@ function App() {
   const showAnswer = (status: boolean) => {
     setShow(status);
   };
-  console.log(data);
   const ShowAnswer = ({ show, showAnswer }: ShowAnswerProps) => {
     return (
       <button onClick={() => showAnswer(!show)}>
