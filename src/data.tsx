@@ -950,7 +950,7 @@ const dataFromTxt = [];
 for (let i = 0; i < dataFromTxtRaw.length; i += 2) {
   dataFromTxt.push({
     telugu: dataFromTxtRaw[i],
-    kannasa: dataFromTxtRaw[i + 1],
+    kannada: dataFromTxtRaw[i + 1],
   });
 }
 export const data = dataFromTxt;
