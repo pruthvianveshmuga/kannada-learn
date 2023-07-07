@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kannada-learn/static/css/main.073c9b0a.css",
-    "main.js": "/kannada-learn/static/js/main.bbc4517e.js",
+    "main.js": "/kannada-learn/static/js/main.14d226c1.js",
     "static/js/787.52e1dcb6.chunk.js": "/kannada-learn/static/js/787.52e1dcb6.chunk.js",
     "index.html": "/kannada-learn/index.html",
     "main.073c9b0a.css.map": "/kannada-learn/static/css/main.073c9b0a.css.map",
-    "main.bbc4517e.js.map": "/kannada-learn/static/js/main.bbc4517e.js.map",
+    "main.14d226c1.js.map": "/kannada-learn/static/js/main.14d226c1.js.map",
     "787.52e1dcb6.chunk.js.map": "/kannada-learn/static/js/787.52e1dcb6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.bbc4517e.js"
+    "static/js/main.14d226c1.js"
   ]
 }
